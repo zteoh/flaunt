@@ -1,0 +1,36 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pads {
+    padding: 10px;
+}
+
+.margs {
+    margin: 10px;
+}
+
+.one-third {
+    position: relative;
+    width: calc(100% / 3);
+    background-color: rgb(255, 240, 240);
+}
+
+.one-third.margs{
+    width: calc(100% / 3 - 2 * 10px);
+}
+
+.two-thirds {
+    width: calc(100% / 3 * 2);
+    background-color: rgb(225, 240, 255);
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+}
