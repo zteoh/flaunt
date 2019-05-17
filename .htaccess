@@ -1,0 +1,5 @@
+AuthUserFile /path/to/htpasswd/file/.htpasswd 
+AuthGroupFile /dev/null AuthName "Name of Area" 
+AuthType Basic require valid-user
+
+https://www.lifewire.com/password-protect-single-file-with-htaccess-3467922
