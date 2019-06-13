@@ -49,6 +49,11 @@ h6 {
     text-align: center;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 img {
     width: 100%;
 }
@@ -63,13 +68,17 @@ object {
 
 /*General*/
 #landing {
-    height: 20vh;
+    height: 30vh;
     background-color: rgba(255, 250, 248, 0.5);
 }
 
 .content {
     max-width: 992px;
     margin: 0 auto;
+}
+
+.content h2 {
+    padding: 0px 30px;
 }
 
 /*Flexbox Containers*/
@@ -90,10 +99,18 @@ object {
     margin: 10px;
 }
 
+.margs-50 {
+    margin: 50px;
+}
+
 .full-width {
     position: relative;
     width: 100%;
     background-color: rgb(245, 250, 245);
+}
+
+.full-width h4 {
+    padding: 0px 20px;
 }
 
 .one-half {
@@ -131,7 +148,9 @@ object {
 /*Top bar*/
 #topbar {
     display: flex;
-    padding: 30px;
+    padding: 10px 30px;
+    position: absolute;
+    width: calc(100% - 60px);
 }
 
 #topbar h2, #topbar ul, #topbar li {
@@ -219,7 +238,6 @@ video {
 }
 
 [id^=background] img {
-    width: 100%;
     height: 93vh;
     object-fit: cover;
 }

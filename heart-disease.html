@@ -13,11 +13,11 @@
 
 <body>
     <div id="topbar">
-        <h2>Zoe Teoh</h2>
+        <h2><a href="index.html">Zoe Teoh</a></h2>
         <ul>
-            <li>Work</li>
-            <li>Play</li>
-            <li>About</li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="play.html">Play</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </div>
     
@@ -26,6 +26,26 @@
     </div>
     
     <div class="content">
+        <div class="container margs">
+            <div class="one-third">
+                 <div class="pads">
+                    <h4>Skills</h4>
+                    <h5>Scikit Learn, Pandas, Matplotlib, Seaborn</h5>
+                </div>
+            </div>
+            <div class="one-third ">
+                <div class="pads">
+                    <h4>Timeline</h4>
+                    <h5>3 weeks</h5>
+                </div>
+            </div>
+            <div class="one-third">
+                 <div class="pads">
+                    <h4>Team</h4>
+                    <h5>Zoe Teoh, Matthew Kern</h5>
+                </div>
+            </div>
+        </div>
         
         <div class="container margs">
             <div class="one-third">
@@ -35,7 +55,7 @@
             </div>
             <div class="two-thirds">
                 <div class="pads">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+                    <h5>As the leading cause of death in the United States heart disease claim over 23% of American lives. As this is a manageable condition (through lifestyle changes and sometimes medication), we hope that by helping to identify people with heart disease we can help them to live longer and healthier lives. Specifically, by creating a model that can accurately determine if people have heart disease we can hopefully help them to discover the issue and get the care that they need.</h5>
                 </div>
             </div>
             
@@ -48,12 +68,59 @@
         <div class="container margs">
             <div class="one-third">
                 <div class="pads">
-                    <h3>Reflection</h3>
+                    <h3>Steps</h3>
                 </div>
             </div>
             <div class="two-thirds">
                 <div class="pads">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+                    <h5><b>Initial Data Discovery and Exploration</b><br>We will determine what data is available and perform a brief exploratory data analysis in order to find out more about blank values, correlations, and other interesting factors. Since our data are in different .data files, we would have to combine all these data together and figure out what are the name of the columns, converting them into the appropriate data type.</h5>
+                    <h5><b>Visualise the Data</b><br>we hope to better understand the different variables in the dataset by creating some pair plots between variables. Since there are 75 variables, we hope to see whether there is any relationship between the variables and determine whether there is a need to narrow the variables we use.</h5>
+                    <h5><b>Data Cleaning</b><br>Remove any blank values, augment of translate values with known information, and prepare the data to be used by machine learning algorithms. Remove the `name` column, which has recently been filled with dummy values and columns that have been marked “not used”. For continuous variables, we plan to scale them by standardising the data. For categorical variables, we realise there is no clear relationship between the values and plan to use one hot encoding for those variables.</h5>
+                    <h5><b>Initial Machine Learning Exploration</b><br>Test multiple machine learning algorithms to see which ones perform best</h5>
+                    <h5><b>Fine Tuning</b><br>Add parameters or leverage multiple models to build the best solution using grid search and/or random search</h5>
+                    <h5><b>Analyze Results &amp; Present Findings</b><br>Draw conclusions and summarize results (we will be presenting our work in a jupyter notebook and via a short video)</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container margs">
+            <div class="one-third">
+                <div class="pads">
+                    <h3>Machine Learning Strategy</h3>
+                </div>
+            </div>
+            <div class="two-thirds">
+                <div class="pads">
+                    <h5>The problem we are planning to solve is to predict whether a person has heart disease based on a series of variables such as their age, gender, cholesterol level and whether a person smokes. Since we are predicting whether a person has heart disease or not, it would be a binary classification.</h5>
+                    <h5>P(T, E+ΔE) > P(T,E)</h5>
+                    <h5>In our case, the Experience would be the number of datasets that we train our machine learning model with; the Task would be the classification of whether a person has heart disease or not: the Performance measure would be the accuracy of classification, evaluated using the Confusion Matrix so that we can distinguish between type I and type II errors.</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container margs">
+            <div class="one-third">
+                <div class="pads">
+                    <h3>Motivation</h3>
+                </div>
+            </div>
+            <div class="two-thirds">
+                <div class="pads">
+                    <h5>Tasked with using machine learning for a practical application, the options that we liked the most had the potential to help many people. This project stood out not only because of the availability of a rich dataset, but also because the impact of such research really could improve lives. Moreover, as heart disease is so prevalent the number of people that we could help is huge. Thus, although we considered many options for projects this one seemed both feasible and impactful.</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container margs">
+            <div class="one-third">
+                <div class="pads">
+                    <h3>Evaluation of Success
+</h3>
+                </div>
+            </div>
+            <div class="two-thirds">
+                <div class="pads">
+                    <h5>As we have one large dataset, we will use cross-validation to measure the accuracy score for predicting which patients have heart disease. Since it is a classification problem, we think that using a confusion matrix would be the most appropriate in term of evaluating the success. Thus, we hope that our properly tuned model will have a higher accuracy score (and less misclassifications in the confusion matrix) than that of the models that we initially test.</h5>
                 </div>
             </div>
         </div>
