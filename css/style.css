@@ -2,6 +2,7 @@
 
 html {
     font-family: Helvetica, sans-serif;
+    color: #333;
 }
 
 body {
@@ -17,12 +18,7 @@ h5, h6 {
 }
 
 h1 {
-    margin: 20px 0px;
     font-size: 2em;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
 }
 
 h2 {
@@ -69,17 +65,26 @@ object {
 /*General*/
 #landing {
     height: 30vh;
-    background-color: rgba(255, 250, 248, 0.5);
+}
+
+#landing h1, .full-screen h1 {
+    margin: 20px 0px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 .content {
-    max-width: 992px;
+    max-width: 860px;
     margin: 0 auto;
 }
 
+/*
 .content h2 {
     padding: 0px 30px;
 }
+*/
 
 /*Flexbox Containers*/
 .container {
@@ -106,7 +111,6 @@ object {
 .full-width {
     position: relative;
     width: 100%;
-    background-color: rgb(245, 250, 245);
 }
 
 .full-width h4 {
@@ -116,7 +120,6 @@ object {
 .one-half {
     position: relative;
     width: calc(100% / 2);
-    background-color: rgba(255, 255, 245, 0.5);
 }
 
 .one-half.margs{
@@ -126,14 +129,12 @@ object {
 .one-quarter{
     position: relative;
     width: calc(100% / 4);
-    background-color: rgba(255, 250, 255, 0.5);
 }
 
 
 .one-third {
     position: relative;
     width: calc(100% / 3);
-    background-color: rgba(255, 252, 252, 0.5);
 }
 
 .one-third.margs{
@@ -142,7 +143,6 @@ object {
 
 .two-thirds {
     width: calc(100% / 3 * 2);
-    background-color: rgba(250, 254, 255, 0.5);
 }
 
 /*Top bar*/
@@ -169,7 +169,7 @@ object {
 #topbar li {
     padding: 10px 20px;
     margin: 10px;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 245, 245);
     border-radius: 20px;
 }
 
@@ -240,6 +240,51 @@ video {
 [id^=background] img {
     height: 93vh;
     object-fit: cover;
+}
+
+/*Font Colors*/
+.color-1 {
+    color: tomato;
+}
+
+.color-2 {
+    color: cornflowerblue
+}
+
+.color-3 {
+    color: cadetblue
+}
+
+.color-4 {
+    color: coral
+}
+
+.color-5 {
+    color: darkseagreen
+}
+
+.color-6 {
+    color: darksalmon
+}
+
+#topbar ul {
+    color: tomato;
+}
+
+#landing h1 {
+    color: cornflowerblue;
+}
+
+.content h2 {
+    color: tomato
+}
+
+.full-width h4 {
+    color: darkseagreen;
+}
+
+h4 {
+    color: #5B5E6C;
 }
 
 /*Interactive*/
