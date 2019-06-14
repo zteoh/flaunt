@@ -113,9 +113,11 @@ object {
     width: 100%;
 }
 
+/*
 .full-width h4 {
-    padding: 0px 20px;
+     margin: 0px 20px;
 }
+*/
 
 .one-half {
     position: relative;
@@ -167,10 +169,9 @@ object {
 }
 
 #topbar li {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: rgb(255, 245, 245);
-    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 20px;
+    border-bottom: 5px solid rgb(200,230,200);
 }
 
 /*Showing all projects*/
@@ -268,7 +269,7 @@ video {
 }
 
 .content h2 {
-    color: tomato
+    color: darkseagreen;
 }
 
 .content > h2 {
@@ -283,6 +284,13 @@ h4 {
     color: #5B5E6C;
 }
 
+.full-width > h4 {
+    display: inline;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+    border-bottom: 5px solid darkseagreen;
+}
+
 /*Interactive*/
 .description h5 {
     display: none;
@@ -290,4 +298,8 @@ h4 {
 
 .selected-project:hover, .project:hover {
     background-color: #f6f6f6;
+}
+
+#topbar li:hover {
+	border-color: tomato;
 }
