@@ -267,16 +267,12 @@ video {
     color: darksalmon
 }
 
-#topbar ul {
-    color: tomato;
-}
-
-#landing h1 {
-    color: cornflowerblue;
-}
-
 .content h2 {
     color: tomato
+}
+
+.content > h2 {
+    margin-left: 30px;
 }
 
 .full-width h4 {
@@ -290,4 +286,8 @@ h4 {
 /*Interactive*/
 .description h5 {
     display: none;
+}
+
+.selected-project:hover, .project:hover {
+    background-color: #f6f6f6;
 }

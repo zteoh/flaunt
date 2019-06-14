@@ -1,3 +1,3 @@
-$(".works .one-third").hover(function() {
-    $(".description h5").toggle();
+$(".project").hover(function() {
+    $(this).find(".description h5").toggle();
 });
