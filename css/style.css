@@ -82,7 +82,7 @@ object {
 
 /*
 .content h2 {
-    padding: 0px 30px;
+padding: 0px 30px;
 }
 */
 
@@ -115,39 +115,45 @@ object {
 
 /*
 .full-width h4 {
-     margin: 0px 20px;
+margin: 0px 20px;
 }
 */
 
 /*Mobile Responsive*/
-.one-half {
+.smol-full-width {
     position: relative;
     width: 100%;
 }
 
-.one-half.margs{
-    width: calc(100% - 2 * 10px);
-}
-
-.one-quarter{
+.smol-one-half {
     position: relative;
     width: calc(100% / 2);
 }
 
-
-.one-third {
-    position: relative;
-    width: calc(100% / 2);
-}
-
-.one-third.margs{
+.smol-one-half.margs{
     width: calc(100% / 2 - 2 * 10px);
 }
 
-.two-thirds {
-    width: calc(100% / 2);
+.smol-one-quarter{
+    position: relative;
+    width: calc(100% / 4);
 }
 
+
+.smol-one-third {
+    position: relative;
+    width: calc(100% / 3);
+}
+
+.smol-one-third.margs{
+    width: calc(100% / 3 - 2 * 10px);
+}
+
+.smol-two-thirds {
+    width: calc(100% / 3 * 2);
+}
+
+/*Tablet and Higher*/
 @media only all and (min-width: 700px) {
     .one-half {
         position: relative;
@@ -180,19 +186,9 @@ object {
 
 
 /*Top bar*/
-#topbar {
-    display: flex;
-    padding: 10px 30px;
-    position: absolute;
-    width: calc(100% - 60px);
-}
 
-#topbar h2, #topbar ul, #topbar li {
+#topbar ul, #topbar li {
     display: inline;
-}
-
-#topbar h2 {
-    flex-grow: 2;
 }
 
 #topbar ul {
@@ -204,6 +200,40 @@ object {
     padding: 5px 10px;
     margin: 20px;
     border-bottom: 5px solid rgb(200,230,200);
+}
+
+
+@media only all and (max-width: 700px) {
+    #topbar {
+        justify-content: center;
+    }
+
+    #topbar h2 {
+        margin-top: 10px;
+        text-align: center
+    }
+    
+    #topbar ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only all and (min-width: 700px) {
+    #topbar {
+        display: flex;
+        padding: 10px 30px;
+        position: absolute;
+        width: calc(100% - 60px);
+    }
+
+    #topbar h2 {
+        display: inline;
+    }
+
+    #topbar h2 {
+        flex-grow: 2;
+    }
 }
 
 /*Showing all projects*/
@@ -261,7 +291,7 @@ video {
 }
 
 .full-screen{
-   height: 100vh; 
+    height: 100vh; 
 }
 
 [id^=background] {
@@ -333,5 +363,5 @@ h4 {
 }
 
 #topbar li:hover {
-	border-color: tomato;
+    border-color: tomato;
 }
