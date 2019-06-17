@@ -11,6 +11,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    overflow-wrap: break-word;
 }
 
 h5, h6 {
@@ -22,7 +23,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.375em;
 }
 
 h3 {
@@ -212,7 +213,7 @@ margin: 0px 20px;
         margin-top: 10px;
         text-align: center
     }
-    
+
     #topbar ul {
         display: flex;
         justify-content: center;
@@ -250,7 +251,7 @@ margin: 0px 20px;
 
 /*Individual Project Page*/
 .screenshot {
-    margin: 25px 50px;
+    margin: 25px;
 }
 
 .screenshot img {
@@ -258,17 +259,34 @@ margin: 0px 20px;
 }
 
 .video-mobile {
-    margin: 50px;
-    width: calc(100% / 2 - 2 * 50px);
+    margin: 25px 100px;
+    width: calc(100% - 2 * 100px);
 }
 
 .video-desktop {
-    margin: 25px 50px;
+    margin: 25px;
 }
 
 video {
     width: 100%;
     box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .3);
+}
+
+/*Tablet and Higher*/
+@media only all and (min-width: 700px) {
+    .video-mobile {
+        margin: 50px;
+        width: calc(100% / 2 - 2 * 50px);
+    }
+
+    .video-desktop {
+        margin: 25px 50px;
+    }
+
+    video {
+        width: 100%;
+        box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .3);
+    }  
 }
 
 .zine {

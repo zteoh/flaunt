@@ -1,162 +1,163 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-  <title>Zoe Teoh</title>
-  <meta name="description" content="Zoe's Portfolio">
-  <meta name="author" content="Zoe Teoh">
+        <title>Zoe Teoh</title>
+        <meta name="description" content="Zoe's Portfolio">
+        <meta name="author" content="Zoe Teoh">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/style.css">
-</head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-<body>
-    <div id="topbar">
-        <h2><a href="index.html">Zoe Teoh</a></h2>
-        <ul>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="play.html">Play</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </div>
-    
-    <div id="landing">
-        <h1>Gotham City Crime Tracking System</h1>
-    </div>
-    
-    <div class="content">
-        <div class="container margs">
-            <div class="one-third">
-                 <div class="pads">
-                    <h4>Skills</h4>
-                    <h5>Ruby on Rails, Vue.js, AJAX, HighCharts</h5>
+    <body>
+        <div id="topbar">
+            <h2><a href="index.html">Zoe Teoh</a></h2>
+            <ul>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="play.html">Play</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+        <div id="landing">
+            <h1>Gotham City Crime Tracking System</h1>
+        </div>
+
+        <div class="content">
+            <div class="container margs">
+                <div class="one-third">
+                    <div class="pads">
+                        <h4>Skills</h4>
+                        <h5>Ruby on Rails, Vue.js, AJAX, HighCharts</h5>
+                    </div>
+                </div>
+                <div class="one-third ">
+                    <div class="pads">
+                        <h4>Timeline</h4>
+                        <h5>2 months</h5>
+                    </div>
+                </div>
+                <div class="one-third ">
+                    <div class="pads">
+                        <h4>Awards</h4>
+                        <h5>Chilli Pepper Award (Best Design and Development)</h5>
+                    </div>
                 </div>
             </div>
-            <div class="one-third ">
-                <div class="pads">
-                    <h4>Timeline</h4>
-                    <h5>2 months</h5>
+
+            <div class="container margs">
+                <div class="one-third">
+                    <div class="pads">
+                        <h3>Overview</h3>
+                    </div>
+                </div>
+                <div class="two-thirds">
+                    <div class="pads">
+                        <h5>The Gotham City Police Department online crime tracking system seeks to help the police department track the crimes committed in the city, track criminals who commit them and managem the operations within the department.</h5>
+                    </div>
                 </div>
             </div>
-            <div class="one-third ">
-                <div class="pads">
-                    <h4>Awards</h4>
-                    <h5>Chilli Pepper Award (Best Design and Development)</h5>
+
+            <div class="container margs">
+                <div class="full-width">
+                    <div class="pads">
+                        <h3>Database Design</h3>
+                    </div>
+                </div>
+                <div><img src="images/gcpd/erd.png"></div>
+            </div>
+
+            <div class="container margs">
+                <div class="one-third">
+                    <div class="pads">
+                        <h3>Use Cases</h3>
+                    </div>
+                </div>
+                <div class="two-thirds">
+                    <div class="pads">
+                        <h5>Eventhough (almost) all the CRUD operations are implemented, depending on the role of the user, there are certain authorisation needed to complete certain tasks.</h5>
+                        <h5>To read more about the specific use cases and authorisation for esch user, please refer to the Use Case Document.</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container margs">
+                <div class="one-third">
+                    <div class="pads">
+                        <h3>Layout</h3>
+                    </div>
+                </div>
+                <div class="two-thirds">
+                    <div class="pads">
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <img src="images/gcpd/guest-screen.png">
+                    <h6>Home Page for Guest Accounts</h6>
+                </div>
+                <div class="screenshot">
+                    <img src="images/gcpd/guest-login.png">
+                    <h6>Login Screen</h6>
+                </div>
+                <div class="screenshot">
+                    <img src="images/gcpd/dashboard-commish.png">
+                    <h6>Dashboard Page for Commishioners</h6>
+                </div>
+                <div class="screenshot">
+                    <img src="images/gcpd/commish-dashboard.png">
+                    <h6>Dashboard Page for Commishioners</h6>
+                </div>
+                <div class="screenshot">
+                    <img src="images/gcpd/dashboard-chief.png">
+                    <h6>Dashboard Page for Unit Chiefs</h6>
+                </div>
+                <div class="screenshot">
+                    <img src="images/gcpd/dashboard-officer.png">
+                    <h6>Dashboard Page for Officers</h6>
+                </div>
+                <div class="screenshot">
+                    <img src="images/gcpd/officers-index.png">
+                </div>
+                <div class="screenshot">
+                    <img src="images/gcpd/officers-show.png">
+                </div>
+            </div>
+
+            <div class="container margs">
+                <div class="one-third">
+                    <div class="pads">
+                        <h3>Features</h3>
+                    </div>
+                </div>
+                <div class="two-thirds">
+                    <div class="pads">
+                        <h5>The entire website has be developed to be mobile responsive and a there is a distinct difference between the interface of a guest user and a logged in user.</h5>
+                        <h5>AJAX has been used to assign an officer to an assignment as well as to assign an assignment to an officer.</h5>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="one-half video-mobile ">
+                        <video src="images/gcpd/mobile-reponsive.mov" type="video/mp4" controls autoplay loop>
+                        </video>
+                    </div>
+                    <div class="one-half video-mobile">
+                        <video src="images/gcpd/mobile-reponsive.mov" type="video/mp4" controls autoplay loop></video>
+                    </div>
+                </div>
+
+                <div class="video-desktop">
+                    <video src="images/gcpd/desktop-walkthrough.mov" type="video/mp4" controls autoplay loop></video>
                 </div>
             </div>
         </div>
-        
-        <div class="container margs">
-            <div class="one-third">
-                <div class="pads">
-                    <h3>Overview</h3>
-                </div>
-            </div>
-            <div class="two-thirds">
-                <div class="pads">
-                    <h5>The Gotham City Police Department online crime tracking system seeks to help the police department track the crimes committed in the city, track criminals who commit them and managem the operations within the department.</h5>
-                </div>
-            </div>
+
+        <div id="footer">
         </div>
-        
-        <div class="container margs">
-            <div class="full-width">
-                <div class="pads">
-                    <h3>Database Design</h3>
-                </div>
-            </div>
-            <div><img src="images/gcpd/erd.png"></div>
-        </div>
-        
-        <div class="container margs">
-            <div class="one-third">
-                <div class="pads">
-                    <h3>Use Cases</h3>
-                </div>
-            </div>
-            <div class="two-thirds">
-                <div class="pads">
-                    <h5>Eventhough (almost) all the CRUD operations are implemented, depending on the role of the user, there are certain authorisation needed to complete certain tasks.</h5>
-                    <h5>To read more about the specific use cases and authorisation for esch user, please refer to the Use Case Document.</h5>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container margs">
-            <div class="one-third">
-                <div class="pads">
-                    <h3>Layout</h3>
-                </div>
-            </div>
-            <div class="two-thirds">
-                <div class="pads">
-                    <h5></h5>
-                </div>
-            </div>
-            <div class="screenshot">
-                <img src="images/gcpd/guest-screen.png">
-                <h6>Home Page for Guest Accounts</h6>
-            </div>
-            <div class="screenshot">
-                <img src="images/gcpd/guest-login.png">
-                <h6>Login Screen</h6>
-            </div>
-            <div class="screenshot">
-                <img src="images/gcpd/dashboard-commish.png">
-                <h6>Dashboard Page for Commishioners</h6>
-            </div>
-            <div class="screenshot">
-                <img src="images/gcpd/commish-dashboard.png">
-                <h6>Dashboard Page for Commishioners</h6>
-            </div>
-            <div class="screenshot">
-                <img src="images/gcpd/dashboard-chief.png">
-                <h6>Dashboard Page for Unit Chiefs</h6>
-            </div>
-            <div class="screenshot">
-                <img src="images/gcpd/dashboard-officer.png">
-                <h6>Dashboard Page for Officers</h6>
-            </div>
-            <div class="screenshot">
-                <img src="images/gcpd/officers-index.png">
-            </div>
-            <div class="screenshot">
-                <img src="images/gcpd/officers-show.png">
-            </div>
-        </div>
-        
-        <div class="container margs">
-            <div class="one-third">
-                <div class="pads">
-                    <h3>Features</h3>
-                </div>
-            </div>
-            <div class="two-thirds">
-                <div class="pads">
-                    <h5>The entire website has be developed to be mobile responsive and a there is a distinct difference between the interface of a guest user and a logged in user.</h5>
-                    <h5>AJAX has been used to assign an officer to an assignment as well as to assign an assignment to an officer.</h5>
-                </div>
-            </div>
-            <div class="container">
-                <div class="one-half video-mobile ">
-                    <video src="images/gcpd/mobile-reponsive.mov" type="video/mp4" controls autoplay loop>
-                    </video>
-                </div>
-                <div class="one-half video-mobile">
-                    <video src="images/gcpd/mobile-reponsive.mov" type="video/mp4" controls autoplay loop></video>
-                </div>
-            </div>
-            
-            <div class="video-desktop">
-                <video src="images/gcpd/desktop-walkthrough.mov" type="video/mp4" controls autoplay loop></video>
-            </div>
-        </div>
-    </div>
-    
-    <div id="footer">
-    </div>
-    
-    <script src="js/scripts.js"></script>
-</body>
+
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
