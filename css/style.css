@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.375em;
+    font-size: 1.2em;
 }
 
 h3 {
@@ -35,7 +35,7 @@ h4 {
 }
 
 h5 {
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 1.25em;
 }
 
@@ -44,6 +44,34 @@ h6 {
     font-size: 0.875em;
     margin: 20px 20px 0pc;
     text-align: center;
+}
+
+
+@media only all and (min-width: 700px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.375em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    h4 {
+        line-height: 1.75em;
+    }
+
+    h5 {
+        font-size: 1em;
+        line-height: 1.25em;
+    }
+
+    h6 {
+        font-size: 0.875em;
+    }   
 }
 
 a{
@@ -259,8 +287,8 @@ margin: 0px 20px;
 }
 
 .video-mobile {
-    margin: 25px 100px;
-    width: calc(100% - 2 * 100px);
+    margin: 25px 75px;
+    width: calc(100% - 2 * 75);
 }
 
 .video-desktop {
@@ -382,4 +410,25 @@ h4 {
 
 #topbar li:hover {
     border-color: tomato;
+}
+
+.project img {
+    filter: none;
+}
+
+.other-projects .project:hover img {
+    filter: grayscale(100%);
+}
+
+.project .description {
+    width: calc(100% - 50px);
+}
+
+.project:hover h4 {
+    color: darkseagreen;
+    text-align: center;
+}
+
+.other-projects .project:hover h5 {
+    text-align: center;
 }
