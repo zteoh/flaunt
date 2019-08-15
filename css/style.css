@@ -12,6 +12,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     overflow-wrap: break-word;
+    color: rgb(100,100,100);
 }
 
 h5, h6 {
@@ -102,12 +103,35 @@ object {
     height: 30vh;
 }
 
-#landing h1, .full-screen h1 {
-    margin: 20px 0px;
+#landing h1, .centered, .condensed{
+    margin: 20px 5px;
     text-align: center;
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
+}
+
+.full-screen h1, .full-screen h2, .full-screen h5, .full-screen h4{
+    color: rgb(240,240,240);
+}
+
+
+.condensed {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.condensed h2, .condensed h4 {
+    text-align: left;
+}
+
+/*Tablet and Higher*/
+@media only all and (min-width: 700px) {
+    .condensed {
+        width: 40%;
+    }
 }
 
 .content {
@@ -221,7 +245,9 @@ margin: 0px 20px;
 
 
 /*Top bar*/
-
+#topbar {
+    z-index: 10;
+}
 #topbar ul, #topbar li {
     display: inline;
 }
@@ -343,7 +369,8 @@ video {
 }
 
 .full-screen{
-    height: 100vh; 
+    position: relative;
+    height: 90vh; 
 }
 
 [id^=background] {
@@ -371,7 +398,7 @@ video {
 }
 
 .color-4 {
-    color: coral
+    color: rgb(240, 240, 240);
 }
 
 .color-5 {
@@ -438,4 +465,11 @@ h4 {
 
 .other-projects .project:hover h5 {
     text-align: center;
+}
+
+/*index page*/
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

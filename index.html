@@ -10,40 +10,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <link rel="shortcut icon" href="images/ikg.jpg" type="image/x-icon" />
     </head>
 
     <body>
-        <div id="topbar">
-            <h2><a href="index.html">Zoe Teoh</a></h2>
-            <ul>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="play.html">Play</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
+        <div id="container">
+            <div id="topbar">
+                <h2><a href="index.html">Zoe Teoh</a></h2>
+                <ul>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="play.html">Play</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            
 
-        <div class="full-screen color-2">
-            <h1>Hello, I'm Zoe.</h1>
-            <div id="background-1">
-                <img src="images/index/landing.png">
+            <div class="full-screen color-4">
+                <canvas id="landingCanvas"></canvas>
+                <div class="centered">
+                    <h1>Hello, I'm Zoe.</h1>
+                    <h2>I'm a senior studying Information Systems <br>at Carnegie Mellon University</h2>
+                </div>
             </div>
-        </div>
-        <div class="full-screen">
-            <div id="background-2">
-                <img src="images/index/sky.png">
+            <div class="full-screen color-4">
+                <canvas id="projectCanvas">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <div class="centered">
+                    <h2><u>create: code</u></h2>
+                    <br>
+                    <h4>Cisco Meraki Internship<br>
+                    Crime Tracking System<br>
+                    Sew Forward</h4>
+                    <br><br>
+                    <h2><u>create: craft</u></h2>
+                    <br>
+                    <h4>Zine: Invisible Pains<br>
+                    Architecture: Umbrella House<br>
+                    Summer of Cooking</h4>
+                </div>
             </div>
-        </div>
-        <div class="full-screen">
-            <div id="background-3">
-                <img src="images/index/mountain.png">
-            </div>
-        </div>
 
-        <div id="footer">
+            <div id="footer">
+            </div>
         </div>
 
         <script src="js/scripts.js"></script>
+        <script src="js/draw.js"></script>
     </body>
 </html>
