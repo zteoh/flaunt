@@ -37,6 +37,8 @@ function drawCircle(x, y) {
         ctx.beginPath();
         ctx.fillStyle = 'rgba(255, 255, 255, 0.025)';
         ctx.fillRect(0, 0, project.width, project.height);
+        context.fillStyle = 'rgba(255, 255, 255, 0.025)';
+        context.fillRect(0, 0, project.width, project.height);
 
         ctx.moveTo(x, y);
         ctx.beginPath();
@@ -60,6 +62,8 @@ function drawCircle(x, y) {
     } else if (window.pageYOffset <= window.innerHeight * 0.9 - y) {
         y = y + window.pageYOffset;
         ctx.beginPath();
+        context.fillStyle = 'rgba(255, 255, 255, 0.025)';
+        context.fillRect(0, 0, project.width, project.height);
         ctx.fillStyle = 'rgba(255, 255, 255, 0.025)';
         ctx.fillRect(0, 0, project.width, project.height);
 
@@ -77,6 +81,8 @@ function drawCircle(x, y) {
         context.beginPath();
         context.fillStyle = 'rgba(255, 255, 255, 0.025)';
         context.fillRect(0, 0, project.width, project.height);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.025)';
+        ctx.fillRect(0, 0, project.width, project.height);
 
         context.beginPath();
         context.fillStyle = grd;
