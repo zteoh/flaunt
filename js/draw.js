@@ -81,7 +81,7 @@
             context.fillStyle = grd;
 //            context.fillRect(20, y, project.width - 40, radius);
             const angle = Math.random() * Math.PI
-            context.ellipse(x, y, 220, 150, angle, 0, 2 * Math.PI);
+            context.ellipse(x, y, radius, radius * 0.5, angle, 0, 2 * Math.PI);
             context.fill();
             context.closePath();
 //            console.log(x,y);
