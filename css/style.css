@@ -104,7 +104,7 @@ object {
 }
 
 #landing h1, .centered, .condensed{
-    margin: 20px 5px;
+    padding: 20px 5px;
     text-align: center;
     position: relative;
     top: 50%;
