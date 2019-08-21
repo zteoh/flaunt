@@ -81,9 +81,14 @@ p {
     }   
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
+}
+
+h5 a {
+    font-style: italic;
+    color: darksalmon;
 }
 
 img {
