@@ -455,8 +455,19 @@ h4 {
     filter: none;
 }
 
-.other-projects .project:hover img {
+.other-projects .project img {
     filter: grayscale(100%);
+    transition: 0.3s ease-in-out;
+}
+
+.other-projects .project:hover img {
+    filter: none
+}
+
+@media only all and (max-width: 700px) {
+    .other-projects .project img {
+        filter: none
+    }
 }
 
 .project .description {
