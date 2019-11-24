@@ -29,6 +29,7 @@ h2 {
 
 h3 {
     font-size: 1.25em;
+    color: tomato;
 }
 
 h4 {
@@ -109,6 +110,7 @@ object {
 }
 
 #landing h1, .centered, .condensed{
+    color: tomato;
     padding: 20px 5px;
     text-align: center;
     position: relative;
@@ -423,7 +425,7 @@ video {
 }
 
 .full-width h4 {
-    color: darkseagreen;
+    color: tomato;
 }
 
 h4 {
@@ -435,7 +437,7 @@ h4 {
     display: inline;
     padding-bottom: 10px;
     margin-bottom: 100px;
-    border-bottom: 5px solid darkseagreen;
+    border-bottom: 5px solid tomato;
 }
 
 /*Interactive*/
@@ -456,7 +458,8 @@ h4 {
 }
 
 .other-projects .project img {
-    filter: grayscale(100%);
+    /*filter: grayscale(100%);*/
+    filter: opacity(.5);;
     transition: 0.3s ease-in-out;
 }
 
@@ -476,11 +479,10 @@ h4 {
 
 .project:hover h4 {
     color: darkseagreen;
-    text-align: center;
 }
 
 .other-projects .project:hover h5 {
-    text-align: center;
+    text-align: left;
 }
 
 /*index page*/
