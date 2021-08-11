@@ -496,6 +496,5 @@ canvas {
 
 #about p {
     text-align: left;
-    color: white;
-    background-color: lightsalmon;
+    font-size: 0.8em;
 }
