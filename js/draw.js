@@ -6,10 +6,10 @@ c.height = window.innerHeight;
 var ctx = c.getContext("2d");
 var radius = 200;
 
-var project = document.getElementById("projectCanvas");
-project.width = window.innerWidth;     // equals window dimension
-project.height = window.innerHeight;
-var context = project.getContext("2d");
+// var project = document.getElementById("projectCanvas");
+// project.width = window.innerWidth;     // equals window dimension
+// project.height = window.innerHeight;
+// var context = project.getContext("2d");
 
 // gradient
 var grd = ctx.createLinearGradient(0,0,c.width,0);
@@ -33,9 +33,9 @@ function drawCircle(x, y) {
         ctx.beginPath();
         
         ctx.fillStyle = 'rgba(255, 255, 255, 0.025)';
-        ctx.fillRect(0, 0, project.width, project.height);
-        context.fillStyle = 'rgba(255, 255, 255, 0.025)';
-        context.fillRect(0, 0, project.width, project.height);
+        ctx.fillRect(0, 0, c.width, c.height);
+        // context.fillStyle = 'rgba(255, 255, 255, 0.025)';
+        // context.fillRect(0, 0, c.width, c.height);
 
         ctx.moveTo(x, y);
         ctx.beginPath();
@@ -44,34 +44,35 @@ function drawCircle(x, y) {
         ctx.fill();
         ctx.closePath();
         
-        y = oldY - (window.innerHeight * 0.93 - window.pageYOffset);
-        context.beginPath();
-        context.fillStyle = 'rgba(255, 255, 255, 0.025)';
-        context.fillRect(0, 0, project.width, project.height);
+        // y = oldY - (window.innerHeight * 0.93 - window.pageYOffset);
+        // context.beginPath();
+        // context.fillStyle = 'rgba(255, 255, 255, 0.025)';
+        // context.fillRect(0, 0, project.width, project.height);
 
-        context.fillStyle = grd;
-        const angle = Math.random() * Math.PI
-        context.ellipse(x, y, radius, radius * 0.5, angle, 0, 2 * Math.PI);
-        context.fill();
-        context.closePath();
-    } else {
-        y = y - (window.innerHeight - window.pageYOffset);
-        context.beginPath();
-        
-        context.fillStyle = 'rgba(255, 255, 255, 0.025)';
-        context.fillRect(0, 0, project.width, project.height);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.025)';
-        ctx.fillRect(0, 0, project.width, project.height);
-
-        context.fillStyle = grd;
-//            context.fillRect(20, y, project.width - 40, radius);
-        const angle = Math.random() * Math.PI
-        context.ellipse(x, y, radius, radius * 0.5, angle, 0, 2 * Math.PI);
-        context.fill();
-        context.closePath();
-//            console.log(x,y);
+        // context.fillStyle = grd;
+        // const angle = Math.random() * Math.PI
+        // context.ellipse(x, y, radius, radius * 0.5, angle, 0, 2 * Math.PI);
+        // context.fill();
+        // context.closePath();
     }
-}
+//     } else {
+//         y = y - (window.innerHeight - window.pageYOffset);
+//         context.beginPath();
+        
+//         context.fillStyle = 'rgba(255, 255, 255, 0.025)';
+//         context.fillRect(0, 0, project.width, project.height);
+//         ctx.fillStyle = 'rgba(255, 255, 255, 0.025)';
+//         ctx.fillRect(0, 0, project.width, project.height);
+
+//         context.fillStyle = grd;
+// //            context.fillRect(20, y, project.width - 40, radius);
+//         const angle = Math.random() * Math.PI
+//         context.ellipse(x, y, radius, radius * 0.5, angle, 0, 2 * Math.PI);
+//         context.fill();
+//         context.closePath();
+// //            console.log(x,y);
+//     }
+    }
 
 function drawStaticCircle() {
     x = window.innerWidth / 2;
@@ -81,7 +82,7 @@ function drawStaticCircle() {
         myY = y + (Math.random() * 200) - 100
         ctx.beginPath();
         ctx.fillStyle = 'rgba(255, 255, 255, 0.125)';
-        ctx.fillRect(0, 0, project.width, project.height);
+        ctx.fillRect(0, 0, c.width, c.height);
 
         ctx.moveTo(x, y);
         ctx.beginPath();
@@ -91,18 +92,18 @@ function drawStaticCircle() {
         ctx.closePath();
     }
     
-    for (var i=0; i < 100; i++) {
-        myX = x + (Math.random() * 200) - 100
-        myY = y + (Math.random() * 200) - 100
-        context.beginPath();
-        context.fillStyle = 'rgba(255, 255, 255, 0.125)';
-        context.fillRect(0, 0, project.width, project.height);
+    // for (var i=0; i < 100; i++) {
+    //     myX = x + (Math.random() * 200) - 100
+    //     myY = y + (Math.random() * 200) - 100
+    //     context.beginPath();
+    //     context.fillStyle = 'rgba(255, 255, 255, 0.125)';
+    //     context.fillRect(0, 0, c.width, c.height);
 
-        context.beginPath();
-        context.fillStyle = grd;
-        const angle = Math.random() * Math.PI
-        context.ellipse(myX, myY, radius, radius * 0.5, angle, 0, 2 * Math.PI);
-        context.fill();
-        context.closePath();
-    }
+    //     context.beginPath();
+    //     context.fillStyle = grd;
+    //     const angle = Math.random() * Math.PI
+    //     context.ellipse(myX, myY, radius, radius * 0.5, angle, 0, 2 * Math.PI);
+    //     context.fill();
+    //     context.closePath();
+    // }
 }
