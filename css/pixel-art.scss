@@ -1,0 +1,109 @@
+$size: 10px;
+
+$t: transparent;
+$black: #000;
+$gray: #cdc9cf;
+$dkgray: #a09da1;
+$pink: #ffa6ed;
+
+$cat: (
+  ('background', 'background', 'background', 'outline', 'background', 'background', 'background', 'background', 'background', 'background', 'outline'),
+  ('background', 'background', 'outline', 'body', 'outline', 'background', 'background', 'background', 'background', 'outline', 'body', 'outline'),
+  ('background', 'background', 'outline', 'body', 'highlights', 'outline', 'outline', 'outline', 'outline', 'highlights', 'body', 'outline', 'background', 'background', 'background', 'background', 'background', 'background', 'background', 'background', 'outline', 'outline'),
+  ('background', 'outline', 'highlights', 'body', 'body', 'highlights', 'highlights', 'body', 'highlights', 'body', 'body', 'highlights', 'outline', 'background', 'background', 'background', 'background', 'background', 'background', 'outline', 'body', 'body', 'outline'),
+  ('background', 'outline', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'outline', 'background', 'background', 'background', 'background', 'background', 'background', 'outline', 'body', 'body', 'outline'),
+  ('outline', 'highlights', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'highlights', 'outline', 'outline', 'outline', 'outline', 'background', 'background', 'background', 'outline', 'highlights', 'outline'),
+  ('outline', 'body', 'body', 'eyes', 'body', 'body', 'nose', 'body', 'body', 'eyes', 'body', 'body', 'body', 'highlights', 'body', 'highlights', 'body', 'outline', 'background', 'background', 'outline', 'body', 'outline'),
+  ('outline', 'body', 'cheeks', 'body', 'body', 'nose', 'body', 'nose', 'body', 'body', 'cheeks', 'body', 'body', 'highlights', 'body', 'highlights', 'body', 'body', 'outline', 'outline', 'outline', 'highlights', 'outline'),
+  ('outline', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'outline', 'body', 'outline'),
+  ('outline', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'outline', 'body', 'outline'),
+  ('outline', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'outline'),
+  ('outline', 'highlights', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'outline'),
+  ('outline', 'highlights', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'outline'),
+  ('outline', 'highlights', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'highlights', 'outline'),
+  ('background', 'outline', 'highlights', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'body', 'highlights', 'outline'),
+  ('background', 'background', 'outline', 'highlights', 'body', 'highlights', 'highlights', 'body', 'highlights', 'body', 'body', 'body', 'highlights', 'body', 'highlights', 'highlights', 'body', 'highlights', 'outline'),
+  ('background', 'background', 'background', 'outline', 'body', 'outline', 'outline', 'body', 'outline', 'outline', 'outline', 'outline', 'outline', 'body', 'outline', 'outline', 'body', 'outline'),
+  ('background', 'background', 'background', 'outline', 'outline', 'background', 'background', 'outline', 'outline', 'background', 'background', 'background', 'outline', 'outline', 'background', 'background', 'outline', 'outline')
+);
+
+@function pixelize($colors) {
+  $result: '';
+  $numRows: length($colors);
+
+  @for $rowIndex from 1 through $numRows {
+    $y: ($rowIndex - 1);
+    $row: nth($colors, $rowIndex);
+    $numCols: length($row);
+
+    @for $cellIndex from 1 through $numCols {
+      $x: ($cellIndex - 1);
+      $color: nth($row, $cellIndex);
+      
+      $sep: ',';
+      @if $x == 0 and $y == 0 {
+        $sep: '';
+      }
+      
+      $result: $result + '#{$sep} calc(#{$x} * var(--size)) calc(#{$y} * var(--size)) var(--#{$color})'
+    }
+  }
+  
+  $result: unquote($result);
+  @return $result;
+}
+
+:root {
+  --size: #{$size};
+  --background: #{$t};
+  --outline: #{$black};
+  --body: #{$gray};
+  --highlights: #{$dkgray};
+  --eyes: #{$black};
+  --nose: #{$black};
+  --cheeks: #{$pink};
+}
+
+#cat {
+  position: relative;
+  width: calc(23 * var(--size));
+  height: calc(18 * var(--size));
+  margin: 1rem;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    box-shadow:
+    pixelize($cat);
+  }
+}
+
+// Page Styles
+body {
+  font-family: sans-serif;
+}
+
+label {
+  margin-right: 0.5rem;
+  text-transform: capitalize;
+}
+
+input {
+  margin-right: 1rem;
+}
+
+input[type="number"] {
+  font-size: 16px;
+}
+
+#colors {
+  margin-bottom: 1rem;
+}
+
+#sizes {
+  margin-bottom: 2rem;
+}
